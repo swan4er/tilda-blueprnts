@@ -1167,7 +1167,7 @@ $(document).ready(function() {
 			});
 */
 // Instead as a fallback, download as ArrayBuffer. (TODO: Figure out the bugs with the above, and switch to using that one instead)
-			fetchOrDownloadAndStore(db, Module.locateFile('http://tildatest:3000/blueprints'), 'arraybuffer').then(function(dataArrayBuffer) {
+			fetchOrDownloadAndStore(db, Module.locateFile('http://tildatest:3000/bp/Blueprints'), 'arraybuffer').then(function(dataArrayBuffer) {
 				Module['preloadedPackages'] = {};
 				Module['preloadedPackages'][Module.locateFile('http://tildatest:3000/bp/Blueprints')] = dataArrayBuffer;
 				return dataJsDownload.then(addScriptToDom);
